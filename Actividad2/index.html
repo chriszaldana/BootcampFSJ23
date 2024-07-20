@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Guia de estructuras de control</title>
+</head>
+<body>
+    <!-- navbar mentor -->
+    <nav class="navbar navbar-expand-lg clrfondo">
+        <div class="container px-0">
+          <a class="navbar-brand" href="index.html"><img class="img-fluid logo" src="https://res.cloudinary.com/dbl4ugndy/image/upload/v1721407489/chrisdevlogo-removebg-preview_llj9oi.png" alt="ChrisDev" /></a>
+          <div class="d-flex align-items-center order-lg-3">
+            <div>
+              <button
+                class="navbar-toggler collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar-default"
+                aria-controls="navbar-default"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="icon-bar top-bar mt-0"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 50 50">
+                    <path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z"></path>
+                    </svg></span>
+              </button>
+            </div>
+          </div>
+          <!-- Button -->
+
+          <!-- Collapse -->
+          <div class="collapse navbar-collapse" id="navbar-default">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarLanding" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Landings</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarLanding">
+                  <li>
+                    <h4 class="dropdown-header">Landings</h4>
+                  </li>
+                  <li>
+                    <a href="../mentor/mentor.html" class="dropdown-item">
+                      <span>Mentor</span>
+                      <span class="badge bg-primary ms-2">New</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="../pages/landings/landing-education.html" class="dropdown-item">Education</a>
+                  </li>
+                  <li>
+                    <a href="../pages/landings/home-academy.html" class="dropdown-item">Home Academy</a>
+                  </li>
+                  <li>
+                    <a href="../pages/landings/landing-courses.html" class="dropdown-item">Courses</a>
+                  </li>
+                  <li>
+                    <a href="../pages/landings/course-lead.html" class="dropdown-item">Lead Course</a>
+                  </li>
+                  <li>
+                    <a href="../pages/landings/request-access.html" class="dropdown-item">Request Access</a>
+                  </li>
+                  <li>
+                    <a href="../pages/landings/landing-sass.html" class="dropdown-item">SaaS</a>
+                  </li>
+
+                  <li>
+                    <a href="../pages/landings/landing-job.html" class="dropdown-item">Job Listing</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarPages" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                <ul class="dropdown-menu dropdown-menu-arrow" aria-labelledby="navbarPages">
+                  <li class="dropdown-submenu dropend">
+                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Courses</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="../pages/course-single.html">Course Single</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/course-single-v2.html">Course Single v2</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/course-resume.html">Course Resume</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/course-category.html">Course Category</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/course-checkout.html">Course Checkout</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/course-filter-list.html">Course List/Grid</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/add-course.html">Add New Course</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu dropend">
+                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Paths</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="../pages/course-path.html" class="dropdown-item">Browse Path</a>
+                      </li>
+                      <li>
+                        <a href="../pages/course-path-single.html" class="dropdown-item">Path Single</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu dropend">
+                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Blog</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="../pages/blog.html">Listing</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/blog-single.html">Article</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/blog-category.html">Category</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/blog-sidebar.html">Sidebar</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu dropend">
+                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Career</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="../pages/career.html">Overview</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/career-list.html">Listing</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/career-single.html">Opening</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu dropend">
+                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Portfolio</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="../pages/portfolio.html">List</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/portfolio-single.html">Single</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu dropend">
+                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                      <span>Mentor</span>
+                      <span class="badge bg-primary ms-2">New</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="../mentor/mentor.html">Home</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../mentor/mentor-list.html">List</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../mentor/mentor-single.html">Single</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu dropend">
+                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Job</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="../pages/landings/landing-job.html">Home</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/jobs/job-listing.html">List</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/jobs/job-grid.html">Grid</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/jobs/job-single.html">Single</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/jobs/company-list.html">Company List</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/jobs/company-about.html">Company Single</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu dropend">
+                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Specialty</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="../pages/coming-soon.html">Coming Soon</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/404-error.html">Error 404</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/maintenance-mode.html">Maintenance Mode</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/terms-condition-page.html">Terms &amp; Conditions</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <hr class="mx-3" />
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="../pages/about.html">About</a>
+                  </li>
+                  <li class="dropdown-submenu dropend">
+                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Help Center</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="../pages/help-center.html">Help Center</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/help-center-faq.html">FAQ's</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/help-center-guide.html">Guide</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/help-center-guide-single.html">Guide Single</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/help-center-support.html">Support</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../pages/pricing.html">Pricing</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../pages/compare-plan.html">Compare Plan</a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="../pages/contact.html">Contact</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarAccount" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accounts</a>
+                <ul class="dropdown-menu dropdown-menu-arrow" aria-labelledby="navbarAccount">
+                  <li>
+                    <h4 class="dropdown-header">Accounts</h4>
+                  </li>
+                  <li class="dropdown-submenu dropend">
+                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Instructor</a>
+                    <ul class="dropdown-menu">
+                      <li class="text-wrap">
+                        <h5 class="dropdown-header text-dark">Instructor</h5>
+                        <p class="dropdown-text mb-0">Instructor dashboard for manage courses and earning.</p>
+                      </li>
+                      <li>
+                        <hr class="mx-3" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/dashboard-instructor.html">Dashboard</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/instructor-profile.html">Profile</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/instructor-courses.html">My Courses</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/instructor-order.html">Orders</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/instructor-reviews.html">Reviews</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/instructor-students.html">Students</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/instructor-payouts.html">Payouts</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/instructor-earning.html">Earning</a>
+                      </li>
+                      <li class="dropdown-submenu dropend">
+                        <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Quiz</a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item" href="../pages/instructor-quiz.html">Quiz</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="../pages/instructor-quiz-details.html">Single</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="../pages/instructor-quiz-result.html">Result</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu dropend">
+                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Students</a>
+                    <ul class="dropdown-menu">
+                      <li class="text-wrap">
+                        <h5 class="dropdown-header text-dark">Students</h5>
+                        <p class="dropdown-text mb-0">Students dashboard to manage your courses and subscriptions.</p>
+                      </li>
+                      <li>
+                        <hr class="mx-3" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/dashboard-student.html">Dashboard</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/student-subscriptions.html">Subscriptions</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/payment-method.html">Payments</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/billing-info.html">Billing Info</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/invoice.html">Invoice</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/invoice-details.html">Invoice Details</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/dashboard-student.html">Bookmarked</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="../pages/dashboard-student.html">My Path</a>
+                      </li>
+                      <li class="dropdown-submenu dropend">
+                        <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Quiz</a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item" href="../pages/student-quiz.html">Quiz</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="../pages/student-quiz-attempt.html">Attempt</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="../pages/student-quiz-start.html">Start</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="../pages/student-quiz-result.html">Result</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu dropend">
+                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Admin</a>
+                    <ul class="dropdown-menu">
+                      <li class="text-wrap">
+                        <h5 class="dropdown-header text-dark">Master Admin</h5>
+                        <p class="dropdown-text mb-0">Master admin dashboard to manage courses, user, site setting , and work with amazing apps.</p>
+                      </li>
+                      <li>
+                        <hr class="mx-3" />
+                      </li>
+                      <li class="px-3 d-grid">
+                        <a href="../pages/dashboard/admin-dashboard.html" class="btn btn-sm btn-primary">Go to Dashboard</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <hr class="mx-3" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../pages/sign-in.html">Sign In</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../pages/sign-up.html">Sign Up</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../pages/forget-password.html">Forgot Password</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../pages/profile-edit.html">Edit Profile</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../pages/security.html">Security</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../pages/social-profile.html">Social Profiles</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../pages/notifications.html">Notifications</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../pages/profile-privacy.html">Privacy Settings</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../pages/delete-profile.html">Delete Profile</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../pages/linked-accounts.html">Linked Accounts</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fe fe-more-horizontal"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarDropdown">
+                  <div class="list-group">
+                    <a class="list-group-item list-group-item-action border-0" href="../docs/index.html">
+                      <div class="d-flex align-items-center">
+                        <i class="fe fe-file-text fs-3 text-primary"></i>
+                        <div class="ms-3">
+                          <h5 class="mb-0">Documentations</h5>
+                          <p class="mb-0 fs-6">Browse the all documentation</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item list-group-item-action border-0" href="../docs/bootstrap-5-snippets.html">
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-files fs-3 text-primary"></i>
+                        <div class="ms-3">
+                          <h5 class="mb-0">Snippet</h5>
+                          <p class="mb-0 fs-6">Bunch of Snippet</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item list-group-item-action border-0" href="../docs/changelog.html">
+                      <div class="d-flex align-items-center">
+                        <i class="fe fe-layers fs-3 text-primary"></i>
+                        <div class="ms-3">
+                          <h5 class="mb-0">
+                            Changelog
+                            <span class="text-primary ms-1" id="changelog">v3.1.1</span>
+                          </h5>
+                          <p class="mb-0 fs-6">See what's new</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item list-group-item-action border-0" href="https://geeksui.codescandy.com/geeks-rtl/" target="_blank">
+                      <div class="d-flex align-items-center">
+                        <i class="fe fe-toggle-right fs-3 text-primary"></i>
+                        <div class="ms-3">
+                          <h5 class="mb-0">RTL demo</h5>
+                          <p class="mb-0 fs-6">RTL Pages</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero -->
+      <section class=" py-10 bg-auto clrfondohero hero-graphics pt-5 pb-5">
+        <div class="container">
+          <!-- Hero Section -->
+          <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-7 col-md-12">
+              <div class="py-8 py-lg-0 text-center">
+                <h1 class="display-2 fw-bold mb-3 text-primary"><span
+                    class="text-dark px-3 px-md-0">Actividad 2</span> <span
+                    class=" text-primary"></span>
+                </h1>
+                <p class="mb-6 h2 text-dark">
+                    GUIA ESTRUCTURAS DE CONTROL JAVASCRIPT
+                </p>
+                <div class="dropdown">
+                    <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Ejercicios
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="ejercicio1.html">Ejercicio #1</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>
+
+    <!-- footer -->
+  <footer class="pt-3 pb-3 clrfondo">
+    <div class="container">
+        <div class="row  justify-content-center text-center  align-items-center ">
+
+            <div class="col-12 col-md-12 col-xxl-6 px-0 ">
+                <div class="mb-4">
+                    <a href="index.html">
+                        <img src="https://res.cloudinary.com/dbl4ugndy/image/upload/v1721407489/chrisdevlogo-removebg-preview_llj9oi.png" alt="" class="mb-4 logo-inverse w-50">
+                    </a>
+                    <p class="lead">Hello, I´m Christian Full Stack Developer student at KODIGO. Ready to learn new technologies.</p>
+                </div>
+                <nav class="nav nav-footer justify-content-center">
+                    <a class="nav-link" href="#">About</a>
+                    <span class="my-2 vr opacity-50"></span>
+                    <a class="nav-link" href="#">Careers </a>
+                    <span class="my-2 vr opacity-50"></span>
+                    <a class="nav-link" href="#">Contact</a>
+                    <span class="my-2 vr opacity-50"></span>
+                    <a class="nav-link" href="#">Pricing</a>
+                    <span class="my-2 vr opacity-50"></span>
+                    <a class="nav-link" href="#">Blog</a>
+                    <span class="my-2 vr opacity-50"></span>
+                    <a class="nav-link" href="#">Affilliate</a>
+                    <span class="my-2 vr opacity-50"></span>
+                    <a class="nav-link" href="#">Help</a>
+                    <span class="my-2 vr opacity-50"></span>
+                    <a class="nav-link" href="#">Investors</a>
+                </nav>
+            </div>
+        </div>
+        <!-- Desc -->
+        <hr class="mt-6 mb-3">
+        <div class="row align-items-center">
+            <!-- Desc -->
+            <div class="col-lg-3 col-md-6 col-12">
+                <span>©2024 chrisDev, Inc. Todos los derechos reservados</span>
+            </div>
+
+            <!-- Links -->
+            <div class="col-12 col-md-6 col-lg-7 d-lg-flex justify-content-center">
+                <nav class="nav nav-footer">
+                    <a class="nav-link ps-0" href="#">Privacy Policy</a>
+                    <a class="nav-link px-2 px-md-0" href="#">Cookie Notice </a>
+
+                    <a class="nav-link" href="#">Terms of Use</a>
+                </nav>
+            </div>
+            <div class="col-lg-2 col-md-12 col-12 d-lg-flex justify-content-end">
+                <div class="">
+                    <!--Facebook-->
+                    <a href="#" class=" me-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 48 48">
+                            <path fill="#3F51B5" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"></path><path fill="#FFF" d="M34.368,25H31v13h-5V25h-3v-4h3v-2.41c0.002-3.508,1.459-5.59,5.592-5.59H35v4h-2.287C31.104,17,31,17.6,31,18.723V21h4L34.368,25z"></path>
+                            </svg>
+                    </a>
+
+                    <!--GitHub-->
+                    <a href="https://github.com/chriszaldana" class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50">
+                            <path d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,24,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z"></path>
+                        </svg>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Links -->
+
+
+    </div>
+    </footer>
+                                          
+      
+<script src="Guía-Estructuras-de-Control-JS.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
