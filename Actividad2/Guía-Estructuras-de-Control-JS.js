@@ -203,9 +203,28 @@ document.addEventListener('DOMContentLoaded', () =>{
               <th scope="col">Precio con descuento</th>
               <td>$${precioDescuento}</td></tr>
           </thead>
-        </table>`
+        </table>
+        `
         )
+        document.getElementById('btnalert').innerHTML = `<button onclick="reservaAlert()"  id="reservaBtn" class="btn btn-warning d-flex justify-content-center mb-5" type="button">Reserva ahora</button>`
+
+        const reservaBtn = document.getElementById('reservaBtn');
+        reservaBtn.addEventListener('click', reservaAlert);
+
     })
+
+    
+
+    function reservaAlert(){
+        Swal.fire({
+            title: "Reserva Exitosa!",
+            text: "Un ejetuvo de ventas te llamara pronto",
+            imageUrl: "https://res.cloudinary.com/dbl4ugndy/image/upload/v1721861493/saul_pj8rgl.webp",
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: "Custom image"
+          });
+    }
 })
 
 //Ejercicio 6
@@ -387,7 +406,54 @@ document.addEventListener('DOMContentLoaded', () =>{
     })
 })
 
+//Ejercicio 10
 
+document.addEventListener('DOMContentLoaded', () =>{
+    const btn9 = document.getElementById('btn9')
+
+    btn9.addEventListener('click', () =>{
+        let edadTurnoAM = []
+        let edadTurnoAfter = []
+        let edadTurnoPM = []
+
+        for (let i = 1; i <=5 ; i++) {
+            let edadAddAm = parseFloat(document.getElementById('alum' + i).value)
+            edadTurnoAM.push(edadAddAm)
+        }
+
+
+        for (let i = 6; i <=11 ; i++) {
+            let edadAddTarde = parseFloat(document.getElementById('alum' + i).value)
+            edadTurnoAfter.push(edadAddTarde)
+        }
+
+
+        for (let i = 12; i <=22 ; i++) {
+            let edadAddNoche = parseFloat(document.getElementById('alum' + i).value)
+            edadTurnoPM.push(edadAddNoche)
+        }
+
+        //Logica para calcular los promedios
+
+        let aveEdadTurnoAM = Math.round(edadTurnoAM.reduce((prev,curr) => prev += curr)/edadTurnoAM.length)
+
+        let aveEdadTurnoAf = Math.round(edadTurnoAfter.reduce((prev,curr) => prev += curr)/edadTurnoAfter.length)
+
+        let aveEdadTurnoPM = Math.round(edadTurnoPM.reduce((prev,curr) => prev += curr)/edadTurnoPM.length)
+
+        let edadAveMayor = Math.max(aveEdadTurnoAM, aveEdadTurnoAf, aveEdadTurnoPM)
+
+        //Mostrar los valores
+
+        document.getElementById('titulo').innerText = "Promedios de Edades por turno"
+        document.getElementById('promedioAM').innerText = `Turno de la mañana = ${aveEdadTurnoAM}`
+        document.getElementById('promedioAF').innerText = `Turno de la Tarde = ${aveEdadTurnoAf}`
+        document.getElementById('promedioPM').innerText = `Turno de la Noche = ${aveEdadTurnoPM}`
+        document.getElementById('promediomayor').innerText = `Turno con Mayor promedio de edad = ${edadAveMayor}`
+        
+        
+    })
+})
 
 
     

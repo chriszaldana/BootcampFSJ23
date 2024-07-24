@@ -29,6 +29,7 @@
             </button>
           </div>
         </div>
+        <!-- Button -->
 
         <!-- Collapse -->
         <div class="collapse navbar-collapse" id="navbar-default">
@@ -54,15 +55,69 @@
     </nav>
 
     <div class="container">
-      <div class="text-center mt-3 mb-3">
-        <h1>Cuentanos, ¿cual es tu edad?</h1>
-        <div class="input-group mb-3">
-          <input name="edad" id="edad" type="number" class="form-control" placeholder="Tu edad" aria-label="Username" aria-describedby="basic-addon1">
+      <div class="mt-3 mb-3">
+        <h1 class="text-center">Edades por turnos</h1>
+        <div class="input-group mb-3 d-flex justify-content-center mt-5">
+          <div class="w-50">
+            <p class="fs-3 text-warning">Turno de la mañana</p>
+            <label for="">Edad de alumno</label>
+            <input name="alum1" id="alum1" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon1">
+            <label for="">Edad de alumno</label>
+            <input name="alum2" id="alum2" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon1">
+            <label for="">Edad de alumno</label>
+            <input name="alum3" id="alum3" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon1">
+            <label for="">Edad de alumno</label>
+            <input name="alum4" id="alum4" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon1">
+            <label for="">Edad de alumno</label>
+            <input name="alum5" id="alum5" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon1">
+            <br>
+            <p class="fs-3 text-warning">Turno de la Tarde</p>
+            <label for="">Edad de alumno</label>
+            <input name="alum6" id="alum6" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon1">
+            <label for="">Edad de alumno</label>
+            <input name="alum7" id="alum7" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon1">
+            <label for="">Edad de alumno</label>
+            <input name="alum8" id="alum8" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon1">
+            <label for="">Edad de alumno</label>
+            <input name="alum9" id="alum9" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon1">
+            <label for="">Edad de alumno</label>
+            <input name="alum10" id="alum10" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon1">
+            <label for="">Edad de alumno</label>
+            <input name="alum11" id="alum11" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon1">
+            <br>
+            <p class="fs-3 text-warning">Turno de la Noche</p>
+            <label for="">Edad de alumno</label>
+            <input name="alum12" id="alum12" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon1">
+            <label for="">Edad de alumno</label>
+            <input name="alum13" id="alum13" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon1">
+            <label for="">Edad de alumno</label>
+            <input name="alum14" id="alum14" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon1">
+            <label for="">Edad de alumno</label>
+            <input name="alum15" id="alum15" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon1">
+            <label for="">Edad de alumno</label>
+            <input name="alum16" id="alum16" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon17">
+            <label for="">Edad de alumno</label>
+            <input name="alum17" id="alum17" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon1">
+            <label for="">Edad de alumno</label>
+            <input name="alum18" id="alum18" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon1">
+            <label for="">Edad de alumno</label>
+            <input name="alum19" id="alum19" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon1">
+            <label for="">Edad de alumno</label>
+            <input name="alum20" id="alum20" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon1">
+            <label for="">Edad de alumno</label>
+            <input name="alum21" id="alum21" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon1">
+            <label for="">Edad de alumno</label>
+            <input name="alum22" id="alum22" type="number" class="form-control" placeholder="Ingrese una edad" aria-label="alum1" aria-describedby="basic-addon1">
+          </div>
         </div>
-        <button id="btn" class="btn btn-warning d-flex justify-content-start" type="button">Verificar edad</button>
+        <button id="btn9" class="btn btn-warning d-flex justify-content-start" type="button">Calcular el promedio</button>
       </div>
-      <div>
-        <p class="text-primary fs-2" id="resultado"></p>
+      <div class="container">
+        <p class="fs-2" id="titulo"></p>
+        <p class="fs-2" id="promedioAM"></p>
+        <p class="fs-2" id="promedioAF"></p>
+        <p class="fs-2" id="promedioPM"></p>
+        <p class="fs-2" id="promediomayor"></p>
       </div>
     </div>
 
