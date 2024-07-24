@@ -208,6 +208,185 @@ document.addEventListener('DOMContentLoaded', () =>{
     })
 })
 
+//Ejercicio 6
+
+document.addEventListener('DOMContentLoaded',() =>{
+    const btn5 = document.getElementById('btn5')
+
+    btn5.addEventListener('click', () =>{
+        //Obteniendo los dato
+        let nombre = document.getElementById('nombre3').value
+        let numTele = document.getElementById('telnum1').value
+        let destino = document.querySelector('select[name="destino"] option:checked').value
+        let descuentoDestino
+        let precioRegular
+        let precioDeDescuento
+        let tarifaDescuento
+
+        //Logica para aplicar el descuento dependiendo del destino
+
+        switch(destino){
+            case "La Costa del Sol":
+                descuentoDestino = 0.05
+                precioRegular = 250
+                precioDeDescuento = precioRegular - (precioRegular * descuentoDestino)
+                tarifaDescuento = "5%"
+                break;
+            case "Panchimalco":
+                descuentoDestino = 0.10
+                precioRegular = 300
+                precioDeDescuento = precioRegular - (precioRegular * descuentoDestino)
+                tarifaDescuento = "10%"
+                break;
+            case "Puerto el Triunfo":
+                descuentoDestino = 0.15
+                precioRegular = 700
+                precioDeDescuento = precioRegular - (precioRegular * descuentoDestino)
+                tarifaDescuento = "15%"
+                break;
+            case "Playa las Flores":
+                descuentoDestino = 0.20
+                precioRegular = 1025
+                precioDeDescuento = precioRegular - (precioRegular * descuentoDestino)
+                tarifaDescuento = "20%"
+            default:
+                break;
+        }
+
+        const infoDesti = document.getElementById('infoDesti')
+        infoDesti.insertAdjacentHTML(
+            "beforeend",
+            `<table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Nombre de cliente</th>
+              <td>${nombre}</td></tr>
+              <tr>
+              <th scope="col">Numero de telefono</th>
+              <td>${numTele}</td></tr>
+              <tr>
+              <th scope="col">Modelo escogido</th>
+              <td>${destino}</td></tr>
+              <tr>
+              <th scope="col">Precio</th>
+              <td>$${precioRegular}</td></tr>
+              <th scope="col">Tarifa de descuento</th>
+              <td>${tarifaDescuento}</td></tr>
+              <th scope="col">Precio con descuento</th>
+              <td>$${precioDeDescuento}</td></tr>
+          </thead>
+        </table>`
+        )
+    })
+})
+
+//Ejercicio 7
+
+document.addEventListener('DOMContentLoaded', () =>{
+    const btn6 = document.getElementById('btn6')
+
+    btn6.addEventListener('click', () =>{
+        let numIngresadosArr = []
+
+        for (let i = 1; i <=10; i++) {
+            let nume = parseFloat(document.getElementById('num' + i).value)
+            numIngresadosArr.push(nume)
+        }
+
+        //asignando valores
+        let valNegativos = 0
+        let valPositivos = 0
+        let mult15 = 0
+        let sumPares = 0
+
+        //Logica para encontrar valores
+        for (let numeros of numIngresadosArr) {
+            
+            if(numeros < 0){
+                valNegativos += 1
+            }else if(numeros > 0){
+                valPositivos += 1
+            }
+
+            if(numeros % 15 === 0){
+                mult15 += 1
+            }
+
+            if(numeros % 2 === 0 && numeros > 0){
+                sumPares += numeros
+            }
+        }
+
+        const infoNumeros = document.getElementById('infoNumeros')
+        infoNumeros.insertAdjacentHTML(
+            "beforeend",
+            `<table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Valores Negativos</th>
+              <td>${valNegativos}</td></tr>
+              <tr>
+              <th scope="col">Valores Positivos</th>
+              <td>${valPositivos}</td></tr>
+              <tr>
+              <th scope="col">Multiplos de 15</th>
+              <td>${mult15}</td></tr>
+              <tr>
+              <th scope="col">Suma de Pares</th>
+              <td>${sumPares}</td></tr>
+          </thead>
+        </table>`
+        )
+    })
+})
+
+//Ejercicio 8
+
+document.addEventListener('DOMContentLoaded', () =>{
+
+    const btn7 = document.getElementById('btn7')
+
+    btn7.addEventListener('click', () =>{
+        let tabla = document.getElementById('tabla').value
+        let resultado = ""
+
+        for (let i = 1; i <= 10; i++) {
+            let multi = tabla * i;
+            resultado += `${tabla} * ${i} = ${multi}<br>`
+        }
+        document.getElementById('infoTabla').innerHTML = resultado
+        
+    })
+})
+
+//Ejercicio 9
+
+document.addEventListener('DOMContentLoaded', () =>{
+    const btn8 = document.getElementById('btn8')
+
+    btn8.addEventListener('click', () =>{
+        let celcius = parseFloat(document.getElementById('grados').value)
+
+        //Convertir celcius a Fahrenheit
+        let celAFahren = (celcius * 9/5) + 32
+
+        //Mostrar datos en DOM
+        
+
+        if(celAFahren >= 14 && celAFahren < 32){
+            document.getElementById('infoGrados').innerText = "Temperatura baja"
+        }else if(celAFahren >= 32 && celAFahren <= 68){
+            document.getElementById('infoGrados').innerText = "Temperatura adecuada"
+        }else if(celAFahren >= 68 && celAFahren <= 96){
+            document.getElementById('infoGrados').innerText = "Temperatura alta"
+        }else{
+            document.getElementById('infoGrados').innerText = "Temperatura desconocida"
+        }
+
+        document.getElementById('gradosFha').innerText = `Grados Fahrenheit = ${celAFahren}°`
+    })
+})
+
 
 
 
