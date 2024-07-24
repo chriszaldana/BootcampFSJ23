@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         const imagenFfocus = "https://res.cloudinary.com/dbl4ugndy/image/upload/v1721713598/ffocus_jjunpe.jpg"
         const contenedor = document.getElementById('imgContainer')
         switch (fordModelo) {
-            case "fiesta":
+            case "Ford Fiesta":
                 contenedor.insertAdjacentHTML(
                     "beforeend",
                     `<img class="imgcoti" src="${imagenFfiesta}" alt"${imagenFfiesta}">`
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 precio = 25000
                 precioDescuento = precio - (precio * descuento)
                 break;
-            case "focus":
+            case "Ford Focus":
                 contenedor.insertAdjacentHTML(
                     "beforeend",
                     `<img class="imgcoti" src="${imagenFfocus}" alt"${imagenFfocus}">`
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 precio = 35000
                 precioDescuento = precio - (precio * descuento)
                 break;
-            case "explorer":
+            case "Ford Explorer":
                 contenedor.insertAdjacentHTML(
                     "beforeend",
                     `<img class="imgcoti" src="${imagenFexplorer}" alt"${imagenFexplorer}">`
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 precio = 60000
                 precioDescuento = precio - (precio * descuento)
                 break;
-            case "escape":
+            case "Ford Escape":
                 contenedor.insertAdjacentHTML(
                     "beforeend",
                     `<img class="imgcoti" src="${imagenFescape}" alt"${imagenFescape}">`
